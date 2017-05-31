@@ -14,37 +14,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: default layer
  *
  * ,--------------------------------------------------.                                  ,--------------------------------------------------.
- * | ESCAPE |   "  |   <  |   >  |   (  |   )  |   $  |                                  |   %  |   @  |   +  |   -  |   /  |   *  |   =    |
+ * | ESCAPE |   "  |   «  |   »  |   (  |   )  |   $  |                                  |   %  |   @  |   +  |   -  |   /  |   *  |   =    |
  * |--------+------+------+------+------+-------------|                                  |------+------+------+------+------+------+--------|
- * | C_CEDIL|   B  |E_ACUT|   P  |   O  |E_GRAV|Backsp|                                  |Backsp|   ^  |   V  |   D  |   L  |   J  |   Z    |
+ * | ESCAPE |   B  |   É  |   P  |   O  |   È  |Backsp|                                  |Backsp|   ^  |   V  |   D  |   L  |   J  |   Z    |
  * |--------+------+------+------+------+------|  ace |                                  |  ace |------+------+------+------+------+--------|
- * |   W    |   A  |   U  |   I  |   E  |   ,  |------|                                  |------|   C  |   T  |   S  |   R  |   N  |   M    |
+ * | LShift |   A  |   U  |   I  |   E  |   ,  |------|                                  |------|   C  |   T  |   S  |   R  |   N  |   M    |
  * |--------+------+------+------+------+------|  Tab |                                  | Tab  |------+------+------+------+------+--------|
- * | LShift |A_GRAV|   Y  |   X  |   .  |   K  |      |                                  |      |   '  |   Q  |   G  |   H  |   F  | RShift |
+ * | LSuper |   À  |   Y  |   X  |   .  |   K  |      |                                  |      |   '  |   Q  |   G  |   H  |   F  | RShift |
  * `--------+------+------+------+------+-------------,-------------.      ,-------------`-------------+------+------+------+------+--------'
- *   |LCtrl |E_CIRC|LSuper| LCtrl|  LAlt|             | BEPO |QWERTY|      |AZERTY|LSuper|             | AltGr| RCtrl|RSuper| AltGr| RCtrl|
+ *   |LCtrl |   Ê  |   W  |   Ç  |  LAlt|             | BEPO | BEPO |      | BEPO |LSuper|             | AltGr| RCtrl|RSuper| AltGr| AltGr|
  *   `----------------------------------'      ,------|------|------|      |------+------+------.      `----------------------------------'
  *                                             |      |      |L_NumK|      |L_NumK|      |      |
- *                                             | Space|LShift|------|      |------|Enter |Space |
- *                                             |      |      |L_FNav|      |L_FNav|      |      |
+ *                                             | Space|Backsp|------|      |------|Enter |Space |
+ *                                             |      |  ace |L_FNav|      |L_FNav|      |      |
  *                                             `--------------------'      `--------------------'
  */
 [BEPO] = KEYMAP(
 // Left hand
 KC_ESC, 	BP_DQOT,	BP_LGIL,	BP_RGIL,	BP_LPRN,	BP_RPRN,    BP_DOLLAR,
-BP_CCED,	BP_B,		BP_E_ACUTE,	BP_P,		BP_O,		BP_E_GRAVE,	KC_BSPC,
-BP_W,		BP_A,		BP_U,		BP_I,		BP_E,		BP_COMMA,
-KC_LSHIFT,	BP_A_GRAVE,	BP_Y,		BP_X,		BP_DOT,		BP_K,		KC_TAB,
-KC_LCTL,	BP_ECRC,	KC_LGUI,	KC_LCTL,	KC_LALT,
+KC_ESC, 	BP_B,		BP_E_ACUTE,	BP_P,		BP_O,		BP_E_GRAVE,	KC_BSPC,
+KC_LSHIFT,	BP_A,		BP_U,		BP_I,		BP_E,		BP_COMMA,
+KC_LGUI,	BP_A_GRAVE,	BP_Y,		BP_X,		BP_DOT,		BP_K,		KC_TAB,
+KC_LCTL,	BP_ECRC,	BP_W,	    BP_CCED,	KC_LALT,
 														DF(BEPO),	DF(BEPO),
 																    MO(NUMK),
-												KC_SPC,	KC_LSHIFT,	MO(FNAV),
+												KC_SPC,	KC_BSPC, 	MO(FNAV),
 // Right hand
 				BP_PERCENT,	BP_AT,		BP_PLUS,	BP_MINUS,	BP_SLASH,	BP_ASTR,	BP_EQUAL,
 				KC_BSPC, 	BP_DCRC,	BP_V,		BP_D,		BP_L,		BP_J,		BP_Z,
 						    BP_C,		BP_T,		BP_S,		BP_R,		BP_N,		BP_M,
 				KC_TAB, 	BP_APOS,	BP_Q,		BP_G,		BP_H,		BP_F,	    KC_RSHIFT,
-								        BP_ALGR,	KC_RCTL,	KC_RGUI,    BP_ALGR,	KC_RCTL,
+								        BP_ALGR,	KC_RCTL,	KC_RGUI,    BP_ALGR,	BP_ALGR,
 DF(BEPO),	KC_LGUI,
 MO(NUMK),
 MO(FNAV),	KC_ENTER,	KC_SPC),
