@@ -18,10 +18,6 @@
 
 #include "keymap.h"
 
-// Alt gr
-#define ALGR(kc) RALT(kc)
-#define NO_ALGR KC_RALT
-
 // Normal characters
 #define ES_OVRR KC_GRV
 #define ES_APOS	KC_MINS
@@ -55,8 +51,8 @@
 #define ES_UMLT	LSFT(ES_GRV)
 
 #define ES_GRTR	LSFT(ES_LESS)
-#define ES_SCLN	LSFT(ES_COMM)
-#define ES_COLN	LSFT(ES_DOT)
+#define ES_SCLN	LSFT(KC_COMM)
+#define ES_COLN	LSFT(KC_DOT)
 #define ES_UNDS	LSFT(ES_MINS)
 
 // Alt Gr-ed characters
@@ -72,6 +68,6 @@
 #define ES_RBRC ALGR(ES_PLUS)
 
 #define ES_LCBR	ALGR(ES_ACUT)
-#define ES_RCRB	ALGR(ES_CCED)
+#define ES_RCBR	ALGR(ES_CCED)
 
 #endif
