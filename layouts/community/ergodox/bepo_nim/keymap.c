@@ -1,4 +1,4 @@
-#include "ergodox.h"
+#include QMK_KEYBOARD_H
 #include "keymap_bepo.h"
 #include "keymap_french.h"
 
@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                             |      |  ace |L_FNav|      |L_FNav|      |      |
  *                                             `--------------------'      `--------------------'
  */
-[BEPO] = KEYMAP(
+[BEPO] = LAYOUT_ergodox(
 // Left hand
 KC_ESC, 	BP_DQOT,	BP_LGIL,	BP_RGIL,	BP_LPRN,	BP_RPRN,    BP_DOLLAR,
 KC_ESC, 	BP_B,		BP_E_ACUTE,	BP_P,		BP_O,		BP_E_GRAVE,	KC_BSPC,
@@ -44,7 +44,7 @@ KC_LCTL,	BP_ECRC,	BP_W,	    BP_CCED,	KC_LALT,
 				KC_BSPC, 	BP_DCRC,	BP_V,		BP_D,		BP_L,		BP_J,		BP_Z,
 						    BP_C,		BP_T,		BP_S,		BP_R,		BP_N,		BP_M,
 				KC_TAB, 	BP_APOS,	BP_Q,		BP_G,		BP_H,		BP_F,	    KC_RSHIFT,
-								        BP_ALGR,	KC_RCTL,	KC_RGUI,    BP_ALGR,	BP_ALGR,
+								        KC_ALGR,	KC_RCTL,	KC_RGUI,    KC_ALGR,	KC_ALGR,
 DF(BEPO),	KC_LGUI,
 MO(NUMK),
 MO(FNAV),	KC_ENTER,	KC_SPC),
@@ -52,37 +52,37 @@ MO(FNAV),	KC_ENTER,	KC_SPC),
 /* Keymap 1: numeric keypad layer, sends keypad codes
  *
  * ,--------------------------------------------------.                                  ,--------------------------------------------------.
- * |        |      |      |      |      |      |      |                                  |      |      | NumLo|   /  |   *  |   -  |        |
+ * |        |      |  F10 |  F11 |  F12 |      |      |                                  |      |      | NumLo|   /  |   *  |   -  |        |
  * |--------+------+------+------+------+-------------|                                  |------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |                                  |      |      |   7  |   8  |   9  |   +  |        |
+ * |        |      |  F7  |  F8  |  F9  |      |      |                                  |      |   *  |   7  |   8  |   9  |   +  |        |
  * |--------+------+------+------+------+------|      |                                  |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |------|                                  |------|      |   4  |   5  |   6  |   +  |        |
+ * |        |      |  F4  |  F5  |  F6  |      |------|                                  |------|   +  |   4  |   5  |   6  |   +  |        |
  * |--------+------+------+------+------+------|      |                                  |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |                                  |      |      |   1  |   2  |   3  | Enter|        |
+ * |        |      |  F1  |  F2  |  F3  |      |      |                                  |      |   -  |   1  |   2  |   3  | Enter|        |
  * `--------+------+------+------+------+-------------,-------------.      ,-------------`-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |             |      |      |      |      |      |             |   0  |  00  |   .  | Enter|      |
+ *   |      |      |      |      |      |             |      |      |      |      |      |             |   0  |   .  |   0  | Enter|      |
  *   `----------------------------------'      ,------|------|------|      |------+------+------.      `----------------------------------'
  *                                             |      |      |      |      |      |      |      |
  *                                             |      |      |------|      |------|      |      |
  *                                             |      |      |      |      |      |      |      |
  *                                             `--------------------'      `--------------------'
  */
-[NUMK] = KEYMAP(
+[NUMK] = LAYOUT_ergodox(
 // Left hand
-KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,
-KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,
-KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,
-KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,
+KC_NO,		KC_NO,		KC_F10,		KC_F11,		KC_F12,		KC_NO,		KC_NO,
+KC_NO,		KC_NO,		KC_F7,		KC_F8,		KC_F9,		KC_NO,		KC_NO,
+KC_NO,		KC_NO,		KC_F4,		KC_F5,		KC_F6,		KC_NO,
+KC_NO,		KC_NO,		KC_F1,		KC_F2,		KC_F3,		KC_NO,		KC_NO,
 KC_NO,		KC_NO,		KC_TRNS,	KC_TRNS,	KC_TRNS,
 														KC_TRNS,	KC_TRNS,
 																KC_TRNS,
 												KC_NO,		KC_TRNS,	KC_TRNS,
 // Right hand
 				KC_NO,		KC_NO,		KC_NUMLOCK,	KC_KP_SLASH,	KC_KP_ASTERISK,	KC_KP_MINUS,	KC_NO,
-				KC_NO,		KC_NO,		KC_KP_7,	KC_KP_8,	KC_KP_9,	KC_KP_PLUS,	KC_NO,
-						KC_NO,		KC_KP_4,	KC_KP_5,	KC_KP_6,	KC_KP_PLUS,	KC_NO,
-				KC_NO,		KC_NO,		KC_KP_1,	KC_KP_2,	KC_KP_3,	KC_KP_ENTER,	KC_NO,
-								KC_KP_0,	M(KP_00),	KC_KP_COMMA,	KC_KP_ENTER,	KC_NO,
+				KC_NO,		KC_KP_MINUS,		KC_KP_7,	KC_KP_8,	KC_KP_9,	KC_KP_PLUS,	KC_NO,
+						KC_KP_PLUS,		KC_KP_4,	KC_KP_5,	KC_KP_6,	KC_KP_PLUS,	KC_NO,
+				KC_NO,		KC_KP_MINUS,		KC_KP_1,	KC_KP_2,	KC_KP_3,	KC_KP_ENTER,	KC_NO,
+								KC_KP_0,		KC_KP_COMMA,	M(KP_00), KC_KP_ENTER,	KC_NO,
 KC_TRNS,	KC_TRNS,
 KC_TRNS,
 KC_TRNS,	KC_TRNS,	KC_NO),
@@ -106,7 +106,7 @@ KC_TRNS,	KC_TRNS,	KC_NO),
  *                                             |      |      |      |      |      |      |      |
  *                                             `--------------------'      `--------------------'
  */
-[FNAV] = KEYMAP(
+[FNAV] = LAYOUT_ergodox(
 // Left hand
 KC_NO,		KC_F1,		KC_F2,		KC_F3,		KC_F4,		KC_F5,		KC_MUTE,
 KC_NO,		KC_MS_BTN5,	KC_MS_BTN1,	KC_MS_UP,	KC_MS_BTN2,	KC_MS_WH_UP,	KC_VOLU,
