@@ -18,11 +18,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|                                  |------+------+------+------+------+------+--------|
  * | ESCAPE |   B  |   É  |   P  |   O  |   È  |Backsp|                                  |Backsp|   ^  |   V  |   D  |   L  |   J  |   Z    |
  * |--------+------+------+------+------+------|  ace |                                  |  ace |------+------+------+------+------+--------|
- * | LShift |   A  |   U  |   I  |   E  |   ,  |------|                                  |------|   C  |   T  |   S  |   R  |   N  |   M    |
+ * | LSuper |   A  |   U  |   I  |   E  |   ,  |------|                                  |------|   C  |   T  |   S  |   R  |   N  |   M    |
  * |--------+------+------+------+------+------|  Tab |                                  | Tab  |------+------+------+------+------+--------|
- * | LSuper |   À  |   Y  |   X  |   .  |   K  |      |                                  |      |   '  |   Q  |   G  |   H  |   F  | RShift |
+ * | LShift |   À  |   Y  |   X  |   .  |   K  |      |                                  |      |   '  |   Q  |   G  |   H  |   F  | RShift |
  * `--------+------+------+------+------+-------------,-------------.      ,-------------`-------------+------+------+------+------+--------'
- *   |LCtrl |   Ê  |   W  |   Ç  |  LAlt|             | BEPO | BEPO |      | BEPO |LSuper|             | AltGr| RCtrl|RSuper| AltGr| AltGr|
+ *   |LCtrl |   Ê  |   W  |   Ç  |  LAlt|             | BEPO | BEPO |      | BEPO |LSuper|             | AltGr| RCtrl|RSuper| AltGr| RCtrl|
  *   `----------------------------------'      ,------|------|------|      |------+------+------.      `----------------------------------'
  *                                             |      |      |L_NumK|      |L_NumK|      |      |
  *                                             | Space|Backsp|------|      |------|Enter |Space |
@@ -33,8 +33,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Left hand
 KC_ESC, 	BP_DQOT,	BP_LGIL,	BP_RGIL,	BP_LPRN,	BP_RPRN,    BP_DOLLAR,
 KC_ESC, 	BP_B,		BP_E_ACUTE,	BP_P,		BP_O,		BP_E_GRAVE,	KC_BSPC,
-KC_LSHIFT,	BP_A,		BP_U,		BP_I,		BP_E,		BP_COMMA,
-KC_LGUI,	BP_A_GRAVE,	BP_Y,		BP_X,		BP_DOT,		BP_K,		KC_TAB,
+KC_LGUI,	BP_A,		BP_U,		BP_I,		BP_E,		BP_COMMA,
+KC_LSHIFT,	BP_A_GRAVE,	BP_Y,		BP_X,		BP_DOT,		BP_K,		KC_TAB,
 KC_LCTL,	BP_ECRC,	BP_W,	    BP_CCED,	KC_LALT,
 														DF(BEPO),	DF(BEPO),
 																    MO(NUMK),
@@ -44,7 +44,7 @@ KC_LCTL,	BP_ECRC,	BP_W,	    BP_CCED,	KC_LALT,
 				KC_BSPC, 	BP_DCRC,	BP_V,		BP_D,		BP_L,		BP_J,		BP_Z,
 						    BP_C,		BP_T,		BP_S,		BP_R,		BP_N,		BP_M,
 				KC_TAB, 	BP_APOS,	BP_Q,		BP_G,		BP_H,		BP_F,	    KC_RSHIFT,
-								        KC_ALGR,	KC_RCTL,	KC_RGUI,    KC_ALGR,	KC_ALGR,
+								        KC_ALGR,	KC_RCTL,	KC_RGUI,    KC_ALGR,	KC_RCTL,
 DF(BEPO),	KC_LGUI,
 MO(NUMK),
 MO(FNAV),	KC_ENTER,	KC_SPC),
