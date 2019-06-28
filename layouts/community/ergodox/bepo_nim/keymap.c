@@ -16,8 +16,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.                                  ,--------------------------------------------------.
  * | ESCAPE |   "  |   «  |   »  |   (  |   )  |   $  |                                  |   %  |   @  |   +  |   -  |   /  |   *  |   =    |
  * |--------+------+------+------+------+-------------|                                  |------+------+------+------+------+------+--------|
- * | ESCAPE |   B  |   É  |   P  |   O  |   È  |Backsp|                                  |Backsp|   ^  |   V  |   D  |   L  |   J  |   Z    |
- * |--------+------+------+------+------+------|  ace |                                  |  ace |------+------+------+------+------+--------|
+ * | ESCAPE |   B  |   É  |   P  |   O  |   È  |Delete|                                  |Delete|   ^  |   V  |   D  |   L  |   J  |   Z    |
+ * |--------+------+------+------+------+------|      |                                  |      |------+------+------+------+------+--------|
  * | LSuper |   A  |   U  |   I  |   E  |   ,  |------|                                  |------|   C  |   T  |   S  |   R  |   N  |   M    |
  * |--------+------+------+------+------+------|  Tab |                                  | Tab  |------+------+------+------+------+--------|
  * | LShift |   À  |   Y  |   X  |   .  |   K  |      |                                  |      |   '  |   Q  |   G  |   H  |   F  | RShift |
@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BEPO] = LAYOUT_ergodox(
 // Left hand
 KC_ESC, 	BP_DQOT,	BP_LGIL,	BP_RGIL,	BP_LPRN,	BP_RPRN,    BP_DOLLAR,
-KC_ESC, 	BP_B,		BP_E_ACUTE,	BP_P,		BP_O,		BP_E_GRAVE,	KC_BSPC,
+KC_ESC, 	BP_B,		BP_E_ACUTE,	BP_P,		BP_O,		BP_E_GRAVE,	KC_DEL,
 KC_LGUI,	BP_A,		BP_U,		BP_I,		BP_E,		BP_COMMA,
 KC_LSHIFT,	BP_A_GRAVE,	BP_Y,		BP_X,		BP_DOT,		BP_K,		KC_TAB,
 KC_LCTL,	BP_ECRC,	BP_W,	    BP_CCED,	KC_LALT,
@@ -41,7 +41,7 @@ KC_LCTL,	BP_ECRC,	BP_W,	    BP_CCED,	KC_LALT,
 												KC_SPC,	KC_BSPC, 	MO(FNAV),
 // Right hand
 				BP_PERCENT,	BP_AT,		BP_PLUS,	BP_MINUS,	BP_SLASH,	BP_ASTR,	BP_EQUAL,
-				KC_BSPC, 	BP_DCRC,	BP_V,		BP_D,		BP_L,		BP_J,		BP_Z,
+				KC_DEL, 	BP_DCRC,	BP_V,		BP_D,		BP_L,		BP_J,		BP_Z,
 						    BP_C,		BP_T,		BP_S,		BP_R,		BP_N,		BP_M,
 				KC_TAB, 	BP_APOS,	BP_Q,		BP_G,		BP_H,		BP_F,	    KC_RSHIFT,
 								        KC_ALGR,	KC_RCTL,	KC_RGUI,    KC_ALGR,	KC_RCTL,
