@@ -52,37 +52,37 @@ MO(FNAV),	KC_ENTER,	KC_SPC),
 /* Keymap 1: numeric keypad layer, sends keypad codes
  *
  * ,--------------------------------------------------.                                  ,--------------------------------------------------.
- * |        |      |  F10 |  F11 |  F12 |      |      |                                  |      | NumLo|   +  |   -  |   /  |   *  |   =    |
+ * | ^      |      |  F10 |  F11 |  F12 |      |      |                                  |      | NumLo|   +  |   -  |   /  |   *  |   =    |
  * |--------+------+------+------+------+-------------|                                  |------+------+------+------+------+------+--------|
- * |        |      |  F7  |  F8  |  F9  |      |      |                                  |      |   *  |   7  |   8  |   9  |   +  |        |
+ * | ^      |      |  F7  |  F8  |  F9  |      | ^    |                                  | ^    |   *  |   7  |   8  |   9  |   +  |        |
  * |--------+------+------+------+------+------|      |                                  |      |------+------+------+------+------+--------|
- * |        |      |  F4  |  F5  |  F6  |      |------|                                  |------|   +  |   4  |   5  |   6  |   +  |        |
- * |--------+------+------+------+------+------|      |                                  |      |------+------+------+------+------+--------|
- * |        |      |  F1  |  F2  |  F3  |      |      |                                  |      |   -  |   1  |   2  |   3  | Enter|        |
+ * | ^      |      |  F4  |  F5  |  F6  |      |------|                                  |------|   +  |   4  |   5  |   6  |   +  |        |
+ * |--------+------+------+------+------+------| ^    |                                  | ^    |------+------+------+------+------+--------|
+ * | ^      |      |  F1  |  F2  |  F3  |      |      |                                  |      |   -  |   1  |   2  |   3  | Enter| ^      |
  * `--------+------+------+------+------+-------------,-------------.      ,-------------`-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |             |      |      |      |      |      |             |   0  |   .  |   ,  | Enter|      |
+ *   | ^    |      |      |      | ^    |             | ^    | ^    |      | ^    | ^    |             |  ^   |   0  |   .  | Enter| ^    |
  *   `----------------------------------'      ,------|------|------|      |------+------+------.      `----------------------------------'
- *                                             |      |      |      |      |      |      |      |
- *                                             |      |      |------|      |------|      |      |
- *                                             |      |      |      |      |      |      |      |
+ *                                             |      |      | ^    |      | ^    |      |      |
+ *                                             | ^    | ^    |------|      |------| ^    | ^    |
+ *                                             |      |      | ^    |      | ^    |      |      |
  *                                             `--------------------'      `--------------------'
  */
 [NUMK] = LAYOUT_ergodox(
 // Left hand
-KC_NO,		KC_NO,		KC_F10,		KC_F11,		KC_F12,		KC_NO,		KC_NO,
-KC_NO,		KC_NO,		KC_F7,		KC_F8,		KC_F9,		KC_NO,		KC_NO,
-KC_NO,		KC_NO,		KC_F4,		KC_F5,		KC_F6,		KC_NO,
-KC_NO,		KC_NO,		KC_F1,		KC_F2,		KC_F3,		KC_NO,		KC_NO,
-KC_NO,		KC_NO,		KC_TRNS,	KC_TRNS,	KC_TRNS,
+KC_TRNS,		KC_NO,		KC_F10,		KC_F11,		KC_F12,		KC_NO,		KC_NO,
+KC_TRNS,		KC_NO,		KC_F7,		KC_F8,		KC_F9,		KC_NO,		KC_TRNS,
+KC_TRNS,		KC_NO,		KC_F4,		KC_F5,		KC_F6,		KC_NO,
+KC_TRNS,		KC_NO,		KC_F1,		KC_F2,		KC_F3,		KC_NO,		KC_TRNS,
+KC_TRNS,		KC_NO,		KC_NO,  	KC_NO,  	KC_TRNS,
 														KC_TRNS,	KC_TRNS,
 																    KC_TRNS,
-												KC_NO,	KC_TRNS,	KC_TRNS,
+											KC_TRNS,	KC_TRNS,	KC_TRNS,
 // Right hand
 				KC_NO,		KC_NUMLOCK,		    KC_KP_PLUS,	KC_KP_MINUS,	KC_KP_SLASH,	BP_ASTR,	    BP_EQUAL,
-				KC_NO,		KC_KP_MINUS,		KC_KP_7,	KC_KP_8,	    KC_KP_9,	    KC_KP_PLUS,	    KC_NO,
+				KC_TRNS,	KC_KP_MINUS,		KC_KP_7,	KC_KP_8,	    KC_KP_9,	    KC_KP_PLUS,	    KC_NO,
 						    KC_KP_PLUS,		    KC_KP_4,	KC_KP_5,	    KC_KP_6,	    KC_KP_PLUS,	    KC_NO,
-				KC_NO,		KC_KP_MINUS,		KC_KP_1,	KC_KP_2,	    KC_KP_3,	    KC_KP_ENTER,	KC_NO,
-						                		KC_KP_0,	KC_KP_COMMA,	BP_COMMA,       KC_KP_ENTER,	KC_NO,
+				KC_TRNS,	KC_KP_MINUS,		KC_KP_1,	KC_KP_2,	    KC_KP_3,	    KC_KP_ENTER,	KC_TRNS,
+						                		KC_TRNS,    KC_KP_0,	KC_KP_COMMA,	    KC_KP_ENTER,	KC_TRNS,
 KC_TRNS,	KC_TRNS,
 KC_TRNS,
 KC_TRNS,	KC_TRNS,	KC_NO),
@@ -91,40 +91,40 @@ KC_TRNS,	KC_TRNS,	KC_NO),
 /* Keymap 2: function / navigation / mouse layer
  *
  * ,--------------------------------------------------.                                  ,--------------------------------------------------.
- * |        |  F1  |  F2  |  F3  |  F4  |  F5  |VolMut|                                  |      |  F6  |  F7  |  F8  |  F9  |  F10 |        |
+ * | ^      |  F1  |  F2  |  F3  |  F4  |  F5  |VolMut|                                  |      |  F6  |  F7  |  F8  |  F9  |  F10 |        |
  * |--------+------+------+------+------+-------------|                                  |------+------+------+------+------+------+--------|
- * |        | Next |LClick|  Up  |RClick| WhUp |VolDwn|                                  |      | PgUp | Home |  Up  |  End |  F11 |        |
+ * | ^      | Next |LClick|  Up  |RClick| WhUp |VolDwn|                                  | ^    | PgUp | Home |  Up  |  End |  F11 |        |
  * |--------+------+------+------+------+------|      |                                  |      |------+------+------+------+------+--------|
- * |        | Prev | Left | Down | Right|WhDown|------|                                  |------| PgDn | Left | Down | Right|  F12 |        |
- * |--------+------+------+------+------+------| VolUp|                                  |      |------+------+------+------+------+--------|
- * |        | Undo |  Cut | Copy | Paste|      |      |                                  |      |      |      |      |      |      |        |
+ * | ^      | Prev | Left | Down | Right|WhDown|------|                                  |------| PgDn | Left | Down | Right|  F12 |        |
+ * |--------+------+------+------+------+------| VolUp|                                  | ^    |------+------+------+------+------+--------|
+ * | ^      | Undo |  Cut | Copy | Paste|      |      |                                  |      |      |      |      |      |      | ^      |
  * `--------+------+------+------+------+-------------,-------------.      ,-------------`-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |             |      |      |      |      |      |             |      |      |      |      |      |
+ *   | ^    |      |      |      | ^    |             | ^    | ^    |      | ^    | ^    |             | ^    |      |      |      | ^    |
  *   `----------------------------------'      ,------|------|------|      |------+------+------.      `----------------------------------'
- *                                             |      |      |      |      |      |      |      |
- *                                             |      |      |------|      |------|      |      |
- *                                             |      |      |      |      |      |      |      |
+ *                                             |      |      | ^    |      | ^    |      |      |
+ *                                             | ^    | ^    |------|      |------| ^    | ^    |
+ *                                             |      |      | ^    |      | ^    |      |      |
  *                                             `--------------------'      `--------------------'
  */
 [FNAV] = LAYOUT_ergodox(
 // Left hand
-KC_NO,		KC_F1,		KC_F2,		KC_F3,		KC_F4,		    KC_F5,		    KC_MUTE,
-KC_NO,		KC_MS_BTN5,	KC_MS_BTN1,	KC_MS_UP,	KC_MS_BTN2,	    KC_MS_WH_UP,	KC_VOLU,
-KC_NO,		KC_MS_BTN4,	KC_MS_LEFT,	KC_MS_DOWN,	KC_MS_RIGHT,	KC_MS_WH_DOWN,
-KC_NO,		KC_UNDO,	KC_CUT,		KC_COPY,	KC_PASTE,	    KC_NO,		    KC_VOLD,
-KC_NO,		KC_NO,		KC_TRNS,	KC_TRNS,	KC_TRNS,
+KC_TRNS,	KC_F1,		KC_F2,		KC_F3,		KC_F4,		    KC_F5,		    KC_MUTE,
+KC_TRNS,	KC_MS_BTN5,	KC_MS_BTN1,	KC_MS_UP,	KC_MS_BTN2,	    KC_MS_WH_UP,	KC_VOLU,
+KC_TRNS,	KC_MS_BTN4,	KC_MS_LEFT,	KC_MS_DOWN,	KC_MS_RIGHT,	KC_MS_WH_DOWN,
+KC_TRNS,	KC_UNDO,	KC_CUT,		KC_COPY,	KC_PASTE,	    KC_NO,		    KC_VOLD,
+KC_TRNS,	KC_NO,		KC_NO,  	KC_NO,  	KC_TRNS,
 														KC_TRNS,	KC_TRNS,
 																    KC_TRNS,
-												KC_NO,	KC_TRNS,	KC_TRNS,
+											KC_TRNS,	KC_TRNS,	KC_TRNS,
 // Right hand
 				KC_NO,		KC_F6,		KC_F7,		KC_F8,		KC_F9,		KC_F10,		KC_NO,
-				KC_NO,		KC_PGUP,	KC_HOME,	KC_UP,		KC_END,		KC_F11,		KC_NO,
+				KC_TRNS,	KC_PGUP,	KC_HOME,	KC_UP,		KC_END,		KC_F11,		KC_NO,
 						    KC_PGDOWN,	KC_LEFT,	KC_DOWN,	KC_RIGHT,	KC_F12,		KC_NO,
-				KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,
-								        KC_TRNS,	KC_TRNS,	KC_TRNS,	KC_NO,		KC_NO,
+				KC_TRNS,	KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_NO,		KC_TRNS,
+								        KC_TRNS,	KC_TRNS,	KC_TRNS,	KC_NO,		KC_TRNS,
 KC_TRNS,	KC_TRNS,
 KC_TRNS,
-KC_TRNS,	KC_TRNS,	KC_NO)
+KC_TRNS,	KC_TRNS,	KC_TRNS)
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
