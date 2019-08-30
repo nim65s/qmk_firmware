@@ -2,8 +2,7 @@
 
 Compile & flash:
 ```
-make ergodox_ez:bepo_nim
-make ergodox_ez:bepo_nim:teensy
+make ergodox_ez:bepo_nim && make ergodox_ez:bepo_nim:teensy
 ```
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
